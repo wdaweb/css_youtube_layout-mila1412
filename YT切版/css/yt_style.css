@@ -1,0 +1,398 @@
+html,
+body {
+  height: 100%;
+  /* 或是直接在body設height: 100vh; */
+}
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+  background: #f3f3f3;
+  /* margin-right: 15px; */
+}
+
+body::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background: rgb(145, 145, 145);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: rgb(199, 199, 199);
+}
+
+#left::-webkit-scrollbar {
+  width: 8px;
+  height: 30px;
+}
+
+#left::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background: rgb(207, 207, 207);
+}
+
+#header {
+  background: white;
+  width: 100%;
+  height: 56px;
+  position: fixed;
+  z-index: 1;
+}
+
+#header .left {
+  float: left;
+  /* width: 28.5%; */
+  width: 19%;
+  margin-left: 73px;
+  margin-top: 15px;
+}
+
+#header .middle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  float: left;
+  width: 670px;
+  margin-left: 0%;
+  margin-top: 12px;
+  font-size: 0;
+}
+
+#header .right {
+  float: right;
+  margin-top: 8px;
+  margin-right: 20px;
+}
+
+#header li {
+  display: inline-block;
+}
+
+#header li a i {
+  color: gray;
+  font-size: 1.1rem;
+}
+
+#header .middle input {
+  height: 26px;
+  font-size: 16px;
+  border: solid 1px rgb(218, 215, 215);
+}
+
+#header .middle li:nth-child(2) {
+  width: 65px;
+  height: 28px;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  background: rgb(248, 246, 246);
+  border: solid 1px rgb(218, 215, 215);
+}
+
+#header .middle li:nth-child(3) {
+  margin-left: 2%;
+}
+
+#header .right li:nth-child(1) {
+  margin-left: 0px;
+}
+
+#header .right li:nth-child(2) {
+  margin-left: 25px;
+}
+
+#header .right li:nth-child(3) {
+  margin-left: 20px;
+  width: 78px;
+  height: 40px;
+  border: solid 1px blue;
+  text-align: center;
+  line-height: 40px;
+  font-size: 14px;
+}
+
+/* left 隱藏選單*/
+label {
+  cursor: pointer;
+  color: gray;
+  position: fixed;
+  left: 31px;
+  top: 19px;
+  z-index: 1;
+  font-size: 1.1rem;
+}
+
+#bar {
+  display: none;
+}
+
+#left {
+  /* 設fixed才不會隨著捲軸往下移 */
+  position: fixed;
+  background: white;
+  width: 240px;
+  height: 100%;
+  overflow: hidden;
+  transform: translateX(-100%);
+  transition: 0.3s;
+  z-index: 1;
+}
+
+#left:hover {
+  overflow-y: auto;
+}
+
+#left .left-logo {
+  position: fixed;
+  width: 240px;
+  height: 57px;
+  z-index: 3;
+  /* border-bottom: 1.2px solid rgb(218, 215, 215); */
+}
+
+#left .left-logo label {
+  position: absolute;
+  left: 31px;
+  top: 19px;
+}
+
+#left .left-logo img {
+  position: absolute;
+  left: 73px;
+  top: 15px;
+}
+
+#left li {
+  height: 40px;
+  line-height: 40px;
+}
+
+#left li:hover {
+  background: #f3f3f3;
+}
+
+/* 補上sidebar-1.2 */
+
+#left ul {
+  position: absolute;
+  left: 30px;
+  width: 240px;
+}
+
+#left .sidebar-1 {
+  position: absolute;
+  height: 130px;
+  width: 220px;
+  top: 69px;
+  border-bottom: 1.2px solid rgb(218, 215, 215);
+  font-size: 14px;
+  z-index: 2;
+}
+
+#left .sidebar-2 {
+  position: absolute;
+  height: 88px;
+  width: 220px;
+  top: 210px;
+  border-bottom: 1.2px solid rgb(218, 215, 215);
+  font-size: 14px;
+  z-index: 2;
+}
+
+#left .sidebar-3 {
+  position: absolute;
+  height: 420px;
+  width: 220px;
+  border-bottom: 1.2px solid rgb(218, 215, 215);
+  display: inline-block;
+}
+
+#left .sidebar-three {
+  width: 190px;
+  position: absolute;
+  top: 76%;
+  left: 36px;
+  list-style: none;
+  font-size: 14px;
+}
+
+#left .sidebar-three li:nth-child(1) {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+#left .sidebar-three li:nth-child(2) {
+  width: 90px;
+  height: 35px;
+  border: solid 1px blue;
+  text-align: center;
+  line-height: 35px;
+}
+
+#left .sidebar-4 {
+  position: absolute;
+  height: 288px;
+  width: 220px;
+  top: 430px;
+  border-bottom: 1.2px solid rgb(218, 215, 215);
+  font-size: 14px;
+  z-index: 2;
+}
+
+#left .sidebar-5 {
+  position: absolute;
+  height: 47px;
+  width: 220px;
+  top: 726px;
+  border-bottom: 1.2px solid rgb(218, 215, 215);
+  font-size: 14px;
+  z-index: 2;
+}
+
+#left .sidebar-6 {
+  position: absolute;
+  height: 127px;
+  width: 220px;
+  top: 783px;
+  border-bottom: 1.2px solid rgb(218, 215, 215);
+  font-size: 14px;
+  z-index: 2;
+}
+
+#left .sidebar-7 {
+  position: absolute;
+  height: 165px;
+  width: 220px;
+  top: 921px;
+  border-bottom: 1.2px solid rgb(218, 215, 215);
+  font-size: 14px;
+  z-index: 2;
+}
+
+#left .copyright {
+  width: 240px;
+  position: absolute;
+  top: 1085px;
+  left: 30px;
+  list-style: none;
+  font-size: 13px;
+  line-height: 1.5;
+  padding-bottom: 16px;
+}
+
+#left .copyright a {
+  text-decoration: none;
+  line-height: 1.3;
+  color: #606060;
+}
+
+#left .copyright p {
+  color: #909090;
+}
+
+#bar:checked + #left {
+  transform: translateX(0);
+}
+
+/* float:left */
+#left-thin {
+  float: left;
+  width: 72px;
+  height: 100%;
+  position: fixed;
+  font-size: 12px;
+  position: absolute;
+  top: 68px;
+  left: 2px;
+  text-align: center;
+}
+
+#left-thin i {
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+#left-thin li:nth-child(1) {
+  color: #ff0000;
+}
+
+#left-thin li:nth-child(2) {
+  color: #ff0000;
+}
+
+#left-thin li:nth-child(n + 3) {
+  color: #606060;
+}
+
+/* float:right */
+#right {
+  float: right;
+  /* height: 100%; */
+  width: calc(100% - 72px);
+  background: #f3f3f3;
+  margin-top: 56px;
+}
+
+#right .container {
+  height: 100%;
+  width: 88%;
+  margin: auto;
+}
+
+#right .card {
+  float: left;
+  width: 25%;
+  padding: 8px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+}
+
+#right .card .big-photo {
+  margin-top: 12px;
+  margin-bottom: 10px;
+}
+
+#right .card .big-photo img {
+  width: 100%;
+}
+
+#right .card .info .small-photo {
+  float: left;
+  width: 10%;
+}
+
+#right .card .info .small-photo img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+#right .card .info .text {
+  float: right;
+  width: 85%;
+  height: 100%;
+  line-height: 1.2;
+  letter-spacing: 1.1px;
+}
+
+#right .card .info .text p:nth-child(1) {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #030303;
+  font-size: 16px;
+}
+
+#right .card .info .text p:nth-child(2) {
+  color: #606060;
+  font-size: 14px;
+  padding-top: 5px;
+}
+
+/* 頭貼水平置中? */
